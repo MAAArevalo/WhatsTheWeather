@@ -1,6 +1,7 @@
 <?php
 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+print_r($uri);
 
 $routes = [
     '/' => 'controllers/index.php',
@@ -16,7 +17,7 @@ function routeController($uri, $routes){
         } else{
             require 'controllers/404.php';
         }
-        throw new Exception("Something bad happened.");
+        
     } catch (Exception $e) {
         echo "Caught error: " . $e->getMessage();
     }
