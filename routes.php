@@ -1,0 +1,25 @@
+<?php
+
+$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+
+$routes = [
+    '/' => 'controllers/index.php',
+];
+
+
+
+function routeController($uri, $routes){
+
+    try {
+        if(array_key_exists($uri, $routes)){
+            require $routes[$uri];
+        } else{
+            require 'controllers/404.php';
+        }
+        throw new Exception("Something bad happened.");
+    } catch (Exception $e) {
+        echo "Caught error: " . $e->getMessage();
+    }
+}
+
+routeController($uri, $routes);
