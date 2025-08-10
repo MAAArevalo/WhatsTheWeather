@@ -6,6 +6,11 @@ function getCity( ){
     return json_decode( $city_data, true );
 }
 
+function getCountry( ){
+    $country_data = file_get_contents( 'data/countries.json' );
+    return json_decode( $country_data, true );
+}
+
 /* Free API from openweathermap.org */
 
 function getWeather( $params = '' ) {
