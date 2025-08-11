@@ -1,5 +1,7 @@
 <?php
 
+defined('APP_STARTED') or die('ACCESS DENIED');
+
 function get_header( $header = '' ){
     $headerurl = "views/partials/header.php";
     if(!empty($header)){
