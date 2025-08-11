@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php 
+http_response_code(404);
+get_header(); 
+
+?>
 <section class="container mx-auto px-3 h-screen">
     <div id="weather-storm"></div>
     <h1 class="text-center">PAGE NOT FOUND</h1>

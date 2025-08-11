@@ -1,5 +1,5 @@
 <?php
-
+defined('APP_STARTED') or die('ACCESS DENIED');
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 $routes = [
