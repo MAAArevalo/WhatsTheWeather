@@ -16,5 +16,4 @@ class main{
         });
     }
 }
-
 jQuery(() => new main());
