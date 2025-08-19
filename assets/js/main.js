@@ -4,7 +4,9 @@ class main{
     }
 
     bindEvents(){
-
+        jQuery("#search").keyup(function (e) { 
+            
+        });
     }
 
     search(){
